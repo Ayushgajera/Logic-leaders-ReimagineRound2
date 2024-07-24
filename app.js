@@ -43,7 +43,7 @@ function loco() {
   // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
   ScrollTrigger.refresh();
 }
-loco();
+// loco();
 
 function openFunction() {
   document.getElementById("menu").style.width = "300px";
@@ -99,5 +99,89 @@ function homePageMouseHover() {
     );
   });
 }
+homePageMouseHover();
 
-homePageMouseHover()
+function scrollAnimation() {
+  let textTL = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".page3",
+      // markers: true,
+      start: "top top",
+      end: "100% 50%",
+      scrub: 2,
+      pin: true,
+    },
+  });
+
+  textTL
+    .to(
+      ".center",
+      {
+        height: "100vh",
+      },
+      "a"
+    )
+    .to(
+      ".top",
+      {
+        top: "-50%",
+      },
+      "a"
+    )
+    .to(
+      ".bottom",
+      {
+        bottom: "-50%",
+      },
+      "a"
+    )
+    .to(
+      ".top > h1",
+      {
+        top: "80%",
+      },
+      "a"
+    )
+    .to(
+      ".bottom > h1",
+      {
+        bottom: "80%",
+      },
+      "a"
+    )
+    .to(".page3-content", {
+      delay: -0.2,
+      paddingTop: "0%",
+    });
+}
+
+scrollAnimation();
+
+function marqueeAnimation() {
+  window.addEventListener("wheel", (dets) => {
+    if (dets.deltaY > 0) {
+      gsap.to(".marque", {
+        transform: "translateX(-200%)",
+        repeat: -1,
+        duration: 4,
+        ease: "none",
+      });
+
+      gsap.to(".marque  img", {
+        rotate: 0,
+      });
+    } else {
+      gsap.to(".marque", {
+        transform: "translateX(0%)",
+        repeat: -1,
+        duration: 4,
+        ease: "none",
+      });
+
+      gsap.to(".marque  img", {
+        rotate: 180,
+      });
+    }
+  });
+}
+marqueeAnimation();
