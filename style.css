@@ -8,3 +8,67 @@ body {
   height: 100vh;
   width: 100%;
 }
+.page1 {
+  background: rgb(245, 245, 245);
+  background: radial-gradient(
+    circle,
+    rgba(245, 245, 245, 5) -50%,
+    rgba(112, 193, 217, 1) 30%
+  );
+}
+
+.content {
+  font-family: 'Baloo Bhai 2';
+}
+
+.content h2 {
+	color: #fff;
+  font-weight: bold;
+	position: absolute;
+	transform: translate(-35%, -50%);
+}
+
+.content h2:nth-child(1) {
+	color: #0A0706;
+}
+
+.content h2:nth-child(2) {
+	color: #f8f8f8;
+	animation: animate 3s ease-in-out infinite;
+}
+
+@keyframes animate {
+	0%,
+	100% {
+		clip-path: polygon(
+			0% 45%,
+			16% 44%,
+			33% 50%,
+			54% 60%,
+			70% 61%,
+			84% 59%,
+			100% 52%,
+			100% 100%,
+			0% 100%
+		);
+	}
+
+	50% {
+		clip-path: polygon(
+			0% 60%,
+			15% 65%,
+			34% 66%,
+			51% 62%,
+			67% 50%,
+			84% 45%,
+			100% 46%,
+			100% 100%,
+			0% 100%
+		);
+	}
+}
+.page1-content{
+  background-image: url(./images/home-milk.png);
+  background-repeat: no-repeat;
+  overflow: hidden;
+}

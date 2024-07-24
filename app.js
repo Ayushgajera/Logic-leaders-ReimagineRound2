@@ -44,3 +44,48 @@ function loco() {
   ScrollTrigger.refresh();
 }
 loco();
+
+let homeTl = gsap.timeline();
+let heading = document.querySelector(".content");
+
+heading.addEventListener("mouseenter", function () {
+  homeTl.clear().restart();
+  homeTl.to(
+    ".upperLine",
+    {
+      duration: 1,
+      ease: "power1.out",
+      scale: 1,
+    },
+    "main-ani"
+  );
+  homeTl.to(
+    ".lowwerLine",
+    {
+      duration: 1,
+      ease: "power1.out",
+      scale: 1,
+    },
+    "main-ani"
+  );
+});
+
+heading.addEventListener("mouseleave", function () {
+  homeTl.clear().restart();
+  homeTl.to(
+    ".upperLine",
+    {
+      scale: 0,
+      duration:1
+    },
+    "main-ani-remove"
+  );
+  homeTl.to(
+    ".lowwerLine",
+    {
+      scale: 0,
+      duration:1
+    },
+    "main-ani-remove"
+  );
+});
