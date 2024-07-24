@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="main">
+    <div class="main relative">
       <div class="page1 h-screen w-full relative overflow-hidden">
         <nav class="h-20 py-3 w-full md:px-5 flex justify-between items-center">
           <img src="./images/logo.png" class="h-full w-fit z-[3]" alt="oreo" />
@@ -113,7 +113,7 @@
           >
             <img
               src="./images/home-oreo-heading.png"
-              class="h-[20%] md:h-[33%] absolute -left-[1%] md:left-[27%]"
+              class="h-[20%] md:h-[33%] absolute -left-[1%] top-[35%] md:top-[28%] md:left-[27%]"
               alt="oreo-image"
             />
             <div class="content z-[3]">
@@ -122,16 +122,16 @@
             </div>
           </div>
           <div
-            class="upperLine hidden md:flex scale-0 absolute  h-[8rem] top-[30%] text-3xl uppercase left-[4%] text-white"
+            class="upperLine hidden md:flex scale-0 absolute h-[8rem] top-[32%] text-3xl uppercase left-[8%] text-white"
           >
             <h3 class="">chocolate crocante</h3>
-            <img src="./images/line.png" alt="line" />
+            <img src="./images/line.png" class="h-[60%]" alt="line" />
           </div>
           <div
-            class="lowwerLine scale-0 hidden md:flex items-end absolute top-[80%] text-3xl h-[8rem] uppercase left-[10%] text-black"
+            class="lowwerLine scale-0 hidden md:flex items-end absolute top-[60%] text-3xl h-[8rem] uppercase left-[15%] text-black"
           >
             <h3 class="">dulce relleno</h3>
-            <img src="./images/line2.png" alt="line" />
+            <img src="./images/line2.png" class="h-[60%]" alt="line" />
           </div>
         </div>
         <img
@@ -146,11 +146,11 @@
         />
       </div>
 
-      <div class="page2 h-screen w-full bg-red-500 z-[4]"></div>
+      <div class="page2 h-screen w-full bg-[url(images/star-wars-bg-IMWX4OB3.webp)] z-[4]"></div>
 
       <div class="page3 h-[100vh] w-full overflow-hidden relative">
         <div
-          class="bg-zinc-300 top h-[50vh] w-full absolute top-0 overflow-hidden flex justify-center items-center"
+          class="bg-[url('images/star-wars-bg-IMWX4OB3.webp')] text-white top h-[50vh] w-full absolute top-0 overflow-hidden flex justify-center items-center"
         >
           <h1
             class="text-[5rem] md:text-[15rem] font-bold absolute top-[80%] md:top-[50%]"
@@ -158,8 +158,8 @@
             OREO
           </h1>
         </div>
-        <div class="center flex justify-center items-center h-full w-full">
-          <div class="page3-content pt-[100vh]">
+        <div class="center bg-[url(images/star-wars-bg-IMWX4OB3.webp)] flex justify-center items-center h-full w-full">
+          <div class="page3-content pt-[100vh] w-full h-screen flex justify-center items-center">
             <h3
               class="text-[2rem] text-center md:text-[3rem] text-white font-semibold"
             >
@@ -168,7 +168,7 @@
           </div>
         </div>
         <div
-          class="bg-zinc-300 bottom h-[50vh] w-full absolute bottom-0 overflow-hidden flex justify-center items-center"
+          class="bg-[url('images/star-wars-bg-IMWX4OB3.webp')] text-white bottom h-[50vh] w-full absolute bottom-0 overflow-hidden flex justify-center items-center"
         >
           <h1
             class="text-[5rem] md:text-[15rem] font-bold absolute bottom-[77%] md:bottom-[40%]"
@@ -178,10 +178,10 @@
         </div>
       </div>
 
-      <div class="page4">
+      <div class="page4 bg-[url(images/star-wars-bg-IMWX4OB3.webp)]">
         <div class="move">
           <div class="marque">
-            <h1 class="flex items-center font-bold text-[5rem] md:text-[10rem]">
+            <h1 class="flex items-center font-bold text-[5rem] text-white md:text-[10rem]">
               <img
                 src="./images/oreo.png"
                 class="w-[5rem] md:w-[9rem]"
@@ -190,7 +190,7 @@
             </h1>
           </div>
           <div class="marque">
-            <h1 class="flex items-center font-bold text-[5rem] md:text-[10rem]">
+            <h1 class="flex items-center font-bold text-[5rem] text-white md:text-[10rem]">
               <img
                 src="./images/oreo.png"
                 class="w-[5rem] md:w-[9rem]"
@@ -199,7 +199,7 @@
             </h1>
           </div>
           <div class="marque">
-            <h1 class="flex items-center font-bold text-[5rem] md:text-[10rem]">
+            <h1 class="flex items-center font-bold text-[5rem] text-white md:text-[10rem]">
               <img
                 src="./images/oreo.png"
                 class="w-[5rem] md:w-[9rem]"
@@ -208,7 +208,7 @@
             </h1>
           </div>
           <div class="marque">
-            <h1 class="flex items-center font-bold text-[5rem] md:text-[10rem]">
+            <h1 class="flex items-center font-bold text-[5rem] text-white md:text-[10rem]">
               <img
                 src="./images/oreo.png"
                 class="w-[5rem] md:w-[9rem]"
@@ -217,7 +217,7 @@
             </h1>
           </div>
           <div class="marque">
-            <h1 class="flex items-center font-bold text-[5rem] md:text-[10rem]">
+            <h1 class="flex items-center font-bold text-[5rem] text-white md:text-[10rem]">
               <img
                 src="./images/oreo.png"
                 class="w-[5rem] md:w-[9rem]"
@@ -226,7 +226,7 @@
             </h1>
           </div>
           <div class="marque">
-            <h1 class="flex items-center font-bold text-[5rem] md:text-[10rem]">
+            <h1 class="flex items-center font-bold text-[5rem] text-white md:text-[10rem]">
               <img
                 src="./images/oreo.png"
                 class="w-[5rem] md:w-[9rem]"
@@ -235,7 +235,7 @@
             </h1>
           </div>
           <div class="marque">
-            <h1 class="flex items-center font-bold text-[5rem] md:text-[10rem]">
+            <h1 class="flex items-center font-bold text-[5rem] text-white md:text-[10rem]">
               <img
                 src="./images/oreo.png"
                 class="w-[5rem] md:w-[9rem]"
@@ -246,7 +246,7 @@
         </div>
       </div>
 
-      <div class="page5 h-screen w-full bg-red-400"></div>
+      <div class="page5 h-screen w-full  bg-[url(images/star-wars-bg-IMWX4OB3.webp)]"></div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>

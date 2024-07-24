@@ -54,6 +54,7 @@ function closeFunction() {
   document.getElementById("mainbox").style.marginLeft = "0px";
 }
 
+
 function homePageMouseHover() {
   let heading = document.querySelector(".content");
 
