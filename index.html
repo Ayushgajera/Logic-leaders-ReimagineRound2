@@ -20,13 +20,94 @@
   <body>
     <div class="main">
       <div class="page1 h-screen w-full relative overflow-hidden">
-        <nav
-          class="h-20 z-[3] py-3 w-full md:px-5 flex justify-between items-center"
-        >
+        <nav class="h-20 py-3 w-full md:px-5 flex justify-between items-center">
           <img src="./images/logo.png" class="h-full w-fit z-[3]" alt="oreo" />
           <div class="nav-part-2">
-            <div class="nav-icon bg-white h-[50%] w-[50%] rounded-full">
+            <!-- <div class="nav-icon bg-white h-[50%] w-[50%] rounded-full">
               <img src="./images/menu-icon.png" class="h-full w-full" alt="" />
+            </div> -->
+
+            <div
+              id="mainbox"
+              class="bg-white px-3 py-1 rounded-full"
+              onclick="openFunction()"
+            >
+              &#9776;
+            </div>
+            <div id="menu" class="sidemenu z-[99] flex items-center flex-col">
+              <button class="cta flex items-center">
+                <span class="hover-underline-animation"> Home </span>
+                <svg
+                  id="arrow-horizontal"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="10"
+                  viewBox="0 0 46 16"
+                >
+                  <path
+                    id="Path_10"
+                    data-name="Path 10"
+                    d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+                    transform="translate(30)"
+                    fill="white"
+                  ></path>
+                </svg>
+              </button>
+              <button class="cta flex items-center">
+                <span class="hover-underline-animation"> About </span>
+                <svg
+                  id="arrow-horizontal"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="10"
+                  viewBox="0 0 46 16"
+                >
+                  <path
+                    id="Path_10"
+                    data-name="Path 10"
+                    d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+                    transform="translate(30)"
+                    fill="white"
+                  ></path>
+                </svg>
+              </button>
+              <button class="cta flex items-center">
+                <span class="hover-underline-animation"> Contact </span>
+                <svg
+                  id="arrow-horizontal"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="10"
+                  viewBox="0 0 46 16"
+                >
+                  <path
+                    id="Path_10"
+                    data-name="Path 10"
+                    d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+                    transform="translate(30)"
+                    fill="white"
+                  ></path>
+                </svg>
+              </button>
+              <button class="cta flex items-center">
+                <span class="hover-underline-animation"> Products </span>
+                <svg
+                  id="arrow-horizontal"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="10"
+                  viewBox="0 0 46 16"
+                >
+                  <path
+                    id="Path_10"
+                    data-name="Path 10"
+                    d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+                    transform="translate(30)"
+                    fill="white"
+                  ></path>
+                </svg>
+              </button>
+              <a href="#" class="closebtn" onclick="closeFunction()">&times;</a>
             </div>
           </div>
         </nav>
@@ -57,7 +138,6 @@
             <img src="./images/line2.png" alt="line" />
           </div>
         </div>
-
         <img
           class="w-fit absolute -top-44 right-32"
           src="./images/home-oreo.png"
@@ -70,7 +150,7 @@
         />
       </div>
 
-      <div class="page2 h-screen w-full bg-red-500"></div>
+      <div class="page2 h-screen w-full bg-red-500 z-[4]"></div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
@@ -86,9 +166,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
 
     <script src="app.js"></script>
   </body>

@@ -8,6 +8,95 @@ body {
   height: 100vh;
   width: 100%;
 }
+
+#mainbox {
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.6s;
+}
+.sidemenu {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  height: 100%;
+  width: 0px;
+  background-color: #111;
+  z-index: 1;
+  padding-top: 100px;
+  overflow-x: hidden;
+  transition: all 0.5s;
+}
+.sidemenu a {
+  padding: 8px 8px 8px 64px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #fff;
+  display: block;
+  margin-top: 16px;
+}
+.sidemenu a:hover {
+  color: white;
+}
+.sidemenu .closebtn {
+  position: absolute;
+  top: 0px;
+  left: 10px;
+  font-size: 36px;
+  margin-right: 32px;
+}
+
+.cta {
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+.cta span {
+  padding-bottom: 7px;
+  letter-spacing: 4px;
+  font-size: 1rem;
+  padding-right: 15px;
+  text-transform: uppercase;
+}
+
+.cta svg {
+  transform: translateX(-8px);
+  transition: all 0.3s ease;
+}
+
+.cta:hover svg {
+  transform: translateX(0);
+}
+
+.cta:active svg {
+  transform: scale(0.9);
+}
+
+.hover-underline-animation {
+  position: relative;
+  color: white;
+  padding-bottom: 20px;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.cta:hover .hover-underline-animation:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
 .page1 {
   background: rgb(245, 245, 245);
   background: radial-gradient(
@@ -18,56 +107,56 @@ body {
 }
 
 .content {
-  font-family: 'Baloo Bhai 2';
+  font-family: "Baloo Bhai 2";
 }
 
 .content h2 {
-	color: #fff;
+  color: #fff;
   font-weight: bold;
-	position: absolute;
-	transform: translate(-35%, -50%);
+  position: absolute;
+  transform: translate(-35%, -50%);
 }
 
 .content h2:nth-child(1) {
-	color: #0A0706;
+  color: #0a0706;
 }
 
 .content h2:nth-child(2) {
-	color: #f8f8f8;
-	animation: animate 3s ease-in-out infinite;
+  color: #f8f8f8;
+  animation: animate 3s ease-in-out infinite;
 }
 
 @keyframes animate {
-	0%,
-	100% {
-		clip-path: polygon(
-			0% 45%,
-			16% 44%,
-			33% 50%,
-			54% 60%,
-			70% 61%,
-			84% 59%,
-			100% 52%,
-			100% 100%,
-			0% 100%
-		);
-	}
+  0%,
+  100% {
+    clip-path: polygon(
+      0% 45%,
+      16% 44%,
+      33% 50%,
+      54% 60%,
+      70% 61%,
+      84% 59%,
+      100% 52%,
+      100% 100%,
+      0% 100%
+    );
+  }
 
-	50% {
-		clip-path: polygon(
-			0% 60%,
-			15% 65%,
-			34% 66%,
-			51% 62%,
-			67% 50%,
-			84% 45%,
-			100% 46%,
-			100% 100%,
-			0% 100%
-		);
-	}
+  50% {
+    clip-path: polygon(
+      0% 60%,
+      15% 65%,
+      34% 66%,
+      51% 62%,
+      67% 50%,
+      84% 45%,
+      100% 46%,
+      100% 100%,
+      0% 100%
+    );
+  }
 }
-.page1-content{
+.page1-content {
   background-image: url(./images/home-milk.png);
   background-repeat: no-repeat;
   overflow: hidden;

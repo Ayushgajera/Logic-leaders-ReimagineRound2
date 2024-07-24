@@ -45,47 +45,70 @@ function loco() {
 }
 loco();
 
-let homeTl = gsap.timeline();
-let heading = document.querySelector(".content");
+function openFunction() {
+  document.getElementById("menu").style.width = "300px";
+  document.getElementById("mainbox").style.marginLeft = "300px";
+}
+function closeFunction() {
+  document.getElementById("menu").style.width = "0px";
+  document.getElementById("mainbox").style.marginLeft = "0px";
+}
 
-heading.addEventListener("mouseenter", function () {
-  homeTl.clear().restart();
-  homeTl.to(
-    ".upperLine",
-    {
-      duration: 1,
-      ease: "power1.out",
-      scale: 1,
+document.addEventListener("DOMContentLoaded", function () {
+  // Make the first page fixed
+  gsap.to(".page1", {
+    scrollTrigger: {
+      trigger: ".page1",
+      start: "top top",
+      end: "bottom+=100% top",
+      scrub: true,
+      pin: true,
+      pinSpacing: false,
     },
-    "main-ani"
-  );
-  homeTl.to(
-    ".lowwerLine",
-    {
-      duration: 1,
-      ease: "power1.out",
-      scale: 1,
-    },
-    "main-ani"
-  );
-});
+  });
 
-heading.addEventListener("mouseleave", function () {
-  homeTl.clear().restart();
-  homeTl.to(
-    ".upperLine",
-    {
-      scale: 0,
-      duration:1
-    },
-    "main-ani-remove"
-  );
-  homeTl.to(
-    ".lowwerLine",
-    {
-      scale: 0,
-      duration:1
-    },
-    "main-ani-remove"
-  );
+  // Heading animation on hover
+  let heading = document.querySelector(".content");
+
+  heading.addEventListener("mouseenter", function () {
+    let homeTl = gsap.timeline();
+    homeTl.to(
+      ".upperLine",
+      {
+        duration: 1,
+        ease: "power1.out",
+        scale: 1,
+      },
+      "main-ani"
+    );
+    homeTl.to(
+      ".lowwerLine",
+      {
+        duration: 1,
+        ease: "power1.out",
+        scale: 1,
+      },
+      "main-ani"
+    );
+  });
+
+  heading.addEventListener("mouseleave", function () {
+    let homeTl = gsap.timeline();
+    homeTl.to(
+      ".upperLine",
+      {
+        scale: 0,
+        duration: 1,
+      },
+      "main-ani-remove"
+    );
+    homeTl.to(
+      ".lowwerLine",
+      {
+        scale: 0,
+        duration: 1,
+      },
+      "main-ani-remove"
+    );
+  });
 });
