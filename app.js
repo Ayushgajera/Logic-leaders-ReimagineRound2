@@ -54,20 +54,7 @@ function closeFunction() {
   document.getElementById("mainbox").style.marginLeft = "0px";
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  // Make the first page fixed
-  gsap.to(".page1", {
-    scrollTrigger: {
-      trigger: ".page1",
-      start: "top top",
-      end: "bottom+=100% top",
-      scrub: true,
-      pin: true,
-      pinSpacing: false,
-    },
-  });
-
-  // Heading animation on hover
+function homePageMouseHover() {
   let heading = document.querySelector(".content");
 
   heading.addEventListener("mouseenter", function () {
@@ -111,4 +98,6 @@ document.addEventListener("DOMContentLoaded", function () {
       "main-ani-remove"
     );
   });
-});
+}
+
+homePageMouseHover()
