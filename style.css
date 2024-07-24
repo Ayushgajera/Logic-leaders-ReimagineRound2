@@ -159,6 +159,7 @@ body {
 .page1-content {
   background-image: url(./images/home-milk.png);
   background-repeat: no-repeat;
+  background-size: cover;
   overflow: hidden;
 }
 
