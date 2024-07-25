@@ -561,6 +561,7 @@ canvas {
   display: inline-block;
   font-size: 15px;
   line-height: 15px;
+  font-weight: bold;
   padding: 1rem 3rem!important;
   text-decoration: none;
   cursor: pointer;
