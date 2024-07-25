@@ -473,3 +473,22 @@ ScrollTrigger.create({
 }
 
 canvas();
+
+
+
+
+const nav = document.getElementsByClassName("page5")[0]; // Get the first element with class "page5"
+
+window.onmousemove = (e) => {
+  const percent = e.clientX / window.innerWidth; // Correct capitalization of window
+
+  nav.animate(
+    {
+      transform: `translateX(${percent * nav.offsetWidth * -1}px)`, // Access offsetWidth of the element
+    },
+    {
+      fill: "forwards",
+      duration: 4000,
+    }
+  );
+};
