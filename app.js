@@ -501,3 +501,26 @@ ScrollTrigger.create({
 	end:"bottom 80%",
 	pin:".right"
 })
+
+
+let initialVal  =`M 10 100 Q 500 100 990 100`
+let finalVal = `M 10 100 Q 500 100 990 100`
+
+let mouseAni = document.querySelector('.mouseAni')
+
+mouseAni.addEventListener('mousemove',(dets) => {
+    initialVal = `M 10 100 Q ${dets.x} ${dets.y} 990 100`
+    gsap.to("svg path",{
+        attr : {d : initialVal},
+        ease : 'power3.out',
+        duration : 2.5
+    })
+})
+
+mouseAni.addEventListener("mouseleave",()=>{
+    gsap.to("svg path",{
+        attr: {d:finalVal},
+        ease : "elastic.out(1,0.2)",
+        duration: 2.5
+    })
+})
