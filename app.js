@@ -54,7 +54,6 @@ function closeFunction() {
   document.getElementById("mainbox").style.marginLeft = "0px";
 }
 
-
 function homePageMouseHover() {
   let heading = document.querySelector(".content");
 
@@ -187,24 +186,21 @@ function marqueeAnimation() {
 }
 marqueeAnimation();
 
-
-
-
-function canvas(){
+function canvas() {
   const canvas = document.querySelector("#page3>canvas");
   const context = canvas.getContext("2d");
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
-window.addEventListener("resize", function () {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
-  render();
-})
 
-function files(index) {
-  var data = ` ezgif-frame-001.jpg
+  window.addEventListener("resize", function () {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    render();
+  });
+
+  function files(index) {
+    var data = ` ezgif-frame-001.jpg
 ezgif-frame-002.jpg
 ezgif-frame-003.jpg
 ezgif-frame-004.jpg
@@ -406,45 +402,44 @@ ezgif-frame-199.jpg
 ezgif-frame-200.jpg
 
   `;
-  return data.split("\n")[index];
-}
+    return data.split("\n")[index];
+  }
 
+  const frameCount = 200;
 
-const frameCount = 200;
+  const images = [];
+  const imageSeq = {
+    frame: 0,
+  };
 
-const images = [];
-const imageSeq = {
-    frame: 0
-};
-
-for (let i = 0; i < frameCount; i++) {
+  for (let i = 0; i < frameCount; i++) {
     const img = new Image();
     img.src = files(i);
     images.push(img);
-}
+  }
 
-gsap.to(imageSeq, {
+  gsap.to(imageSeq, {
     frame: frameCount - 1,
     snap: "frame",
     ease: "none",
     scrollTrigger: {
-        scrub: 5,
-        pin: true,
-        trigger: "#page3",
+      scrub: 5,
+      pin: true,
+      trigger: "#page3",
     },
-    onUpdate: render
-});
+    onUpdate: render,
+  });
 
-images[0].onload = render;
+  images[0].onload = render;
 
-function render() {
+  function render() {
     // Adding a delay to simulate slow rendering
     setTimeout(() => {
-        scaleImage(images[imageSeq.frame], context);
+      scaleImage(images[imageSeq.frame], context);
     }, 100); // 100ms delay to simulate slow speed
-}
+  }
 
-function scaleImage(img, ctx) {
+  function scaleImage(img, ctx) {
     var canvas = ctx.canvas;
     var hRatio = canvas.width / img.width;
     var vRatio = canvas.height / img.height;
@@ -452,24 +447,33 @@ function scaleImage(img, ctx) {
     var centerShift_x = (canvas.width - img.width * ratio) / 2;
     var centerShift_y = (canvas.height - img.height * ratio) / 2;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.drawImage(img, 0, 0, img.width, img.height,
-        centerShift_x, centerShift_y, img.width * ratio, img.height * ratio);
-}
+    ctx.drawImage(
+      img,
+      0,
+      0,
+      img.width,
+      img.height,
+      centerShift_x,
+      centerShift_y,
+      img.width * ratio,
+      img.height * ratio
+    );
+  }
 
-gsap.to("#home canvas", {
+  gsap.to("#home canvas", {
     scale: 0.8,
     scrollTrigger: {
-        scrub: 2,
-        trigger: "#home",
-        start: "bottom 100%",
+      scrub: 2,
+      trigger: "#home",
+      start: "bottom 100%",
     },
-});
+  });
 
-ScrollTrigger.create({
+  ScrollTrigger.create({
     trigger: "#home",
     pin: true,
     start: "bottom 100%",
-});
+  });
 }
 
 canvas();
