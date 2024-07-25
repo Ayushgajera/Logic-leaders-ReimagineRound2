@@ -492,3 +492,12 @@ window.onmousemove = (e) => {
     }
   );
 };
+
+
+ScrollTrigger.create({
+	trigger:".gallery",
+  // markers: true,
+	start:"top 0%",
+	end:"bottom 80%",
+	pin:".right"
+})

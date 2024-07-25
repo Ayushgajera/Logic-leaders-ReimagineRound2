@@ -289,3 +289,99 @@ body {
   opacity: 1;
   transform: scale();
 }
+
+/* slider */
+.spacer {
+	width:100%;
+	height:50vh;
+	background:#ddd;
+}
+
+
+.headline {
+	background:#2D4E86;
+	border-radius:6px;
+	height:4em;
+	width:100%;
+}
+
+.text {
+	margin:0.8em 0 0 0;
+	background:#2D4E86;
+	border-radius:6px;
+	height:1em;
+	width:100%;
+}
+
+
+
+
+.gallery {
+  display:flex;	
+  width: 100%;
+  background-color: #000000;
+}
+
+.left {
+	width:50%;
+}
+
+.detailsWrapper {
+	margin:auto;
+	width:80%;
+}
+
+.details {
+  margin-top: 10rem;
+	height:70vh;
+	
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+}
+
+
+.right {
+
+	width:50%;
+	height:100vh;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+}
+
+.photos {
+	width:40vw;
+	height:30vw;
+	/* background:maroon; */
+}
+.photos h1{
+  font-size: 5rem;
+  font-weight: 800;
+   margin-left: 10rem;
+   color: white;
+  font-family: "Baloo Bhai 2";
+}
+.photos p{
+  font-size: 1rem;
+  font-weight: 300;
+   margin-left: 10rem;
+   color: white;
+  font-family: "Baloo Bhai 2";
+}
+
+.btn{
+  color: #ddd;
+  background: none;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  padding: 0.5em 2.5em;
+  cursor: pointer;
+  margin-left: 10rem;
+  margin-top: 2rem;
+  font-size: 1.3rem;
+}
+.page7{
+  width: 100%;
+  height: 100vh;
+}
